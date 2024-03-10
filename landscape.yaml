@@ -51,12 +51,6 @@ views:
                 square: false
                 cards:
                   - type: sensor
-                    entity: sensor.bing_xiang_wen_du
-                    graph: line
-                  - type: sensor
-                    entity: sensor.bing_xiang_shi_du
-                    graph: line
-                  - type: sensor
                     entity: sensor.wo_shi_wen_du
                     graph: line
                   - type: sensor
@@ -68,12 +62,7 @@ views:
                   - type: sensor
                     entity: sensor.lu_tai_shi_du
                     graph: line
-                  - type: sensor
-                    entity: sensor.shu_fang_wen_du
-                    graph: line
-                  - type: sensor
-                    entity: sensor.shu_fang_shi_du
-                    graph: line
+
           - type: vertical-stack
             cards:
               - type: weather-forecast
@@ -517,6 +506,65 @@ views:
           green: 0
           yellow: 60
           red: 80
+      - type: gauge
+        entity: sensor.bing_xiang_wen_du
+        needle: true
+        severity:
+          green: 0
+          yellow: 10
+          red: 20
+      - type: gauge
+        entity: sensor.bing_xiang_shi_du
+        needle: true
+        severity:
+          yellow: 0
+          green: 20
+          red: 80
+      - type: gauge
+        entity: sensor.wo_shi_wen_du
+        needle: true
+        severity:
+          yellow: 0
+          green: 15
+          red: 25
+      - type: gauge
+        entity: sensor.wo_shi_shi_du
+        needle: true
+        severity:
+          yellow: 0
+          green: 30
+          red: 60
+      - type: gauge
+        entity: sensor.lu_tai_wen_du
+        needle: true
+        severity:
+          yellow: 0
+          green: 15
+          red: 25
+      - type: gauge
+        entity: sensor.lu_tai_shi_du
+        needle: true
+        severity:
+          yellow: 0
+          green: 30
+          red: 60
+      - type: gauge
+        entity: sensor.shu_fang_wen_du
+        needle: true
+        severity:
+          yellow: 0
+          green: 15
+          red: 25
+      - type: gauge
+        entity: sensor.shu_fang_shi_du
+        needle: true
+        severity:
+          yellow: 0
+          green: 30
+          red: 60
+
+  - icon: mdi:battery
+    cards:
       - type: gauge
         entity: sensor.bing_xiang_wen_shi_du_ji_dian_liang
         severity:
